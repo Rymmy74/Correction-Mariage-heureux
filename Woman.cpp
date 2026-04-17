@@ -1,35 +1,34 @@
 #include "Woman.hpp"
 
-Woman::Woman(){
-    
+Woman::Woman()
+{
 }
-Woman::Woman(string newFirstName, string newLastName, int newAge) : Person(newFirstName, newLastName, newAge){
-    
-
+Woman::Woman(string newFirstName, string newLastName, int newAge) : Person(newFirstName, newLastName, newAge)
+{
 }
 
-bool Woman::isSingle() const{
-    return partner.getFirstName() == "" && partner.getLastName() == "" && partner.getAge() == 0 ;
-
+bool Woman::isSingle() const
+{
+    return partner.getFirstName() == "" && partner.getLastName() == "" && partner.getAge() == 0;
 }
-Person Woman::getPartner() const{
+Person Woman::getPartner() const
+{
     return partner;
-
 }
-void Woman::setPartner(Person newPartner){
+void Woman::setPartner(Person newPartner)
+{
     partner = newPartner;
-
 }
-void Woman::display() const{
+void Woman::display() const
+{
     Person::display();
 
-   if (isSingle())
-   {
+    if (isSingle())
+    {
         cout << "Elle est célibataire." << endl;
-   }
-   else {
+    }
+    else
+    {
         cout << "Elle est mariée à " + partner.getFirstName() + " " + partner.getLastName() << endl;
-   }
-
-
+    }
 }

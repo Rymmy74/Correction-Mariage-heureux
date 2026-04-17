@@ -1,31 +1,29 @@
 #include <iostream>
 #pragma once
 
-using namespace std ;
+using namespace std;
 
-class Person {
-    protected:
-
+class Person
+{
+protected:
     string firstName;
     string lastName;
     int age;
 
-    public:
-
+public:
     Person();
-    Person(string newFirstName , string newLastName , int newAge);
+    Person(string newFirstName, string newLastName, int newAge);
 
-    void getOld ();
-    
-    string getFirstName () const;
-    void setFirstName (string newFirstName);
+    void getOld();
 
-    string getLastName () const;
-    void setLastName (string newLastName);
+    string getFirstName() const;
+    void setFirstName(string newFirstName);
 
-    int getAge () const;
-    void setAge (int newAge);
+    string getLastName() const;
+    void setLastName(string newLastName);
+
+    int getAge() const;
+    void setAge(int newAge);
 
     void display() const;
-
 };
